@@ -1,0 +1,29 @@
+{
+  "version": 1,
+  "skills": {
+    "find-skills": {
+      "version": "0.1.0",
+      "installedAt": 1771319371693
+    },
+    "humanizer-zh": {
+      "version": "1.0.0",
+      "installedAt": 1771319380174
+    },
+    "tavily-search": {
+      "version": "1.0.0",
+      "installedAt": 1771319382402
+    },
+    "web-search-exa": {
+      "version": "1.0.1",
+      "installedAt": 1771319384498
+    },
+    "duckduckgo-search": {
+      "version": "1.0.0",
+      "installedAt": 1771319386613
+    },
+    "clawhub-skill-2": {
+      "version": "0.1.4",
+      "installedAt": 1771319402505
+    }
+  }
+}

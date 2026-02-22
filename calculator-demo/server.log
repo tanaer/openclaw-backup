@@ -1,0 +1,44 @@
+193.24.0.9 - - [19/Feb/2026 01:22:58] "GET / HTTP/1.1" 200 -
+193.24.0.9 - - [19/Feb/2026 01:22:58] code 404, message File not found
+193.24.0.9 - - [19/Feb/2026 01:22:58] "GET /favicon.ico HTTP/1.1" 404 -
+----------------------------------------
+Exception occurred during processing of request from ('172.104.210.105', 37596)
+Traceback (most recent call last):
+  File "/usr/lib/python3.13/socketserver.py", line 697, in process_request_thread
+    self.finish_request(request, client_address)
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.13/http/server.py", line 1320, in finish_request
+    self.RequestHandlerClass(request, client_address, self,
+    ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                             directory=args.directory)
+                             ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.13/http/server.py", line 672, in __init__
+    super().__init__(*args, **kwargs)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.13/socketserver.py", line 766, in __init__
+    self.handle()
+    ~~~~~~~~~~~^^
+  File "/usr/lib/python3.13/http/server.py", line 436, in handle
+    self.handle_one_request()
+    ~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/usr/lib/python3.13/http/server.py", line 404, in handle_one_request
+    self.raw_requestline = self.rfile.readline(65537)
+                           ~~~~~~~~~~~~~~~~~~~^^^^^^^
+  File "/usr/lib/python3.13/socket.py", line 719, in readinto
+    return self._sock.recv_into(b)
+           ~~~~~~~~~~~~~~~~~~~~^^^
+ConnectionResetError: [Errno 104] Connection reset by peer
+----------------------------------------
+172.104.210.105 - - [19/Feb/2026 18:35:53] "GET / HTTP/1.1" 200 -
+66.228.53.136 - - [19/Feb/2026 18:51:06] "GET / HTTP/1.1" 200 -
+66.175.213.4 - - [19/Feb/2026 19:19:59] "GET / HTTP/1.1" 200 -
+18.218.118.203 - - [20/Feb/2026 02:20:08] "GET / HTTP/1.1" 200 -
+18.218.118.203 - - [20/Feb/2026 02:22:40] "GET / HTTP/1.1" 200 -
+18.218.118.203 - - [20/Feb/2026 02:24:24] code 400, message Bad request version ('À\\x14À')
+18.218.118.203 - - [20/Feb/2026 02:24:24] "\x16\x03\x01\x00{\x01\x00\x00w\x03\x03ßÈF#\x80?\x94\x969Úps²\x0e»\x89:JúkX¹\x97\x81\x1c6\\\x8e9=\x7f¬\x00\x00\x1aÀ/À+À\x11À\x07À\x13À\x09À\x14À" 400 -
+18.218.118.203 - - [20/Feb/2026 02:26:58] code 400, message Bad request syntax ('SSH-2.0-Go')
+18.218.118.203 - - [20/Feb/2026 02:26:58] "SSH-2.0-Go" 400 -
+18.218.118.203 - - [20/Feb/2026 02:29:01] code 400, message Bad request version ('À\\x14À')
+18.218.118.203 - - [20/Feb/2026 02:29:01] "\x16\x03\x01\x00{\x01\x00\x00w\x03\x03yï\x8aò¥\x8d<cáñ\x16\x1dM'~ÕÈsì÷è¬\x11\x93É$_Âª\x98pÛ\x00\x00\x1aÀ/À+À\x11À\x07À\x13À\x09À\x14À" 400 -
+162.216.150.40 - - [20/Feb/2026 05:28:11] "GET / HTTP/1.1" 200 -
+147.185.132.200 - - [20/Feb/2026 10:42:58] "GET / HTTP/1.1" 200 -

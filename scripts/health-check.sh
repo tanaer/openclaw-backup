@@ -1,7 +1,7 @@
 #!/bin/bash
 # 健康检查脚本 - 检查关键服务状态
 LOG_FILE="/root/.openclaw/health.log"
-ALERT_URL="https://chat.890214.net/api/chat"
+ALERT_URL="http://chat.890214.net:80/api/chat"
 AGENT_ID="hklxbot"
 
 log() {
@@ -19,7 +19,7 @@ log "=== 开始健康检查 ==="
 ISSUES=""
 
 # 检查 OpenClaw Gateway
-if ! pgrep -f "openclaw gateway" > /dev/null; then
+if ! pgrep -f "openclaw-gateway" > /dev/null; then
   ISSUES="$ISSUES OpenClaw Gateway 未运行"
   log "⚠️ OpenClaw Gateway 未运行"
 fi
