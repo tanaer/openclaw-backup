@@ -2,6 +2,24 @@
 
 This folder is home. Treat it that way.
 
+## 🎯 Workflow Orchestration
+
+**Read `WORKFLOW.md` for the full guide. Key principles:**
+
+1. **Plan First** - Any non-trivial task (3+ steps) requires a plan in `tasks/todo.md`
+2. **Use Subagents** - Offload research, exploration to keep main context clean
+3. **Self-Improve** - After user corrections, update `tasks/lessons.md` with the pattern
+4. **Verify Before Done** - Never mark complete without proving it works
+5. **Demand Elegance** - Ask "is there a more elegant way?" for non-trivial changes
+6. **Autonomous Bug Fixing** - Just fix bugs. Don't ask for hand-holding.
+
+**Core Principles:**
+- Simplicity First → Minimal code impact
+- No Laziness → Find root causes, no temporary fixes
+- Minimal Impact → Only touch what's necessary
+
+---
+
 ## First Run
 
 If `BOOTSTRAP.md` exists, that's your birth certificate. Follow it, figure out who you are, then delete it. You won't need it again.

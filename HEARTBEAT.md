@@ -14,3 +14,4 @@
 - axonhub-features (支付集成): ✅ 已完成
 - axonhub (项目检查): ✅ 已完成
 - muskapi-auth (认证重构): ✅ 已完成 (3/3)
+- muskapi-v2 (v2.0 升级): ✅ 已完成
