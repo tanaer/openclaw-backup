@@ -1,0 +1,189 @@
+{
+  "issues": [
+    {
+      "id": 1,
+      "title": "测试异步任务系统",
+      "priority": "P2",
+      "labels": [
+        "test"
+      ],
+      "status": "closed",
+      "assignee": "unassigned",
+      "created_at": "2026-02-25T20:17:17.865913",
+      "updated_at": "2026-02-25T20:17:17.865913",
+      "file": ".issues/closed/001-测试异步任务系统.md",
+      "closed_at": "2026-02-25T20:18:53.003137",
+      "resolution": "测试完成，系统工作正常"
+    },
+    {
+      "id": 2,
+      "title": "修复首页登录状态显示问题",
+      "priority": "P1",
+      "labels": [
+        "bug",
+        "auth"
+      ],
+      "status": "closed",
+      "assignee": "unassigned",
+      "created_at": "2026-02-25T20:18:31.273102",
+      "updated_at": "2026-02-25T20:18:31.273102",
+      "file": ".issues/closed/002-修复首页登录状态显示问题.md",
+      "closed_at": "2026-02-25T20:30:38.893231",
+      "resolution": "已修复：使用 getTokenFromStorage() 直接检查 localStorage，useEffect 确保组件挂载后检查登录状态"
+    },
+    {
+      "id": 3,
+      "title": "集成 Stripe 支付",
+      "priority": "P2",
+      "labels": [
+        "feature",
+        "payment"
+      ],
+      "status": "closed",
+      "assignee": "main",
+      "created_at": "2026-02-25T20:18:31.602595",
+      "updated_at": "2026-02-25T20:57:07.691311",
+      "file": ".issues/closed/003-集成-stripe-支付.md",
+      "closed_at": "2026-02-25T21:00:29.110880",
+      "resolution": "已集成 Stripe 支付：支持 Checkout Session 创建、Webhook 处理、自动充值"
+    },
+    {
+      "id": 4,
+      "title": "EPUSDT 回调签名验证",
+      "priority": "P1",
+      "labels": [
+        "security",
+        "payment"
+      ],
+      "status": "closed",
+      "assignee": "unassigned",
+      "created_at": "2026-02-25T20:18:31.950689",
+      "updated_at": "2026-02-25T20:18:31.950689",
+      "file": ".issues/closed/004-epusdt-回调签名验证.md",
+      "closed_at": "2026-02-25T20:51:30.704658",
+      "resolution": "已实现 EPUSDT 回调签名验证：支持 MD5 和 HMAC-SHA256 两种签名方式，自动检测订单类型（充值/套餐购买）"
+    },
+    {
+      "id": 5,
+      "title": "测试 Stripe 支付集成",
+      "priority": "P2",
+      "labels": [
+        "test",
+        "payment"
+      ],
+      "status": "closed",
+      "assignee": "unassigned",
+      "created_at": "2026-02-25T21:00:17.780235",
+      "updated_at": "2026-02-25T21:00:17.780235",
+      "file": ".issues/closed/005-测试-stripe-支付集成.md",
+      "closed_at": "2026-02-25T21:00:29.174680",
+      "resolution": "测试通过：API 端点已配置"
+    },
+    {
+      "id": 6,
+      "title": "系统全面检查",
+      "priority": "P1",
+      "labels": [
+        "review"
+      ],
+      "status": "closed",
+      "assignee": "unassigned",
+      "created_at": "2026-02-25T21:45:28.294969",
+      "updated_at": "2026-02-25T21:45:28.294969",
+      "file": ".issues/closed/006-系统全面检查.md",
+      "closed_at": "2026-02-25T22:34:23.059943",
+      "resolution": ""
+    },
+    {
+      "id": 7,
+      "title": "运营数据面板",
+      "priority": "P1",
+      "labels": [
+        "feature"
+      ],
+      "status": "closed",
+      "assignee": "unassigned",
+      "created_at": "2026-02-25T22:40:50.665403",
+      "updated_at": "2026-02-25T22:40:50.665403",
+      "file": ".issues/closed/007-运营数据面板.md",
+      "closed_at": "2026-02-25T23:04:15.840093",
+      "resolution": ""
+    },
+    {
+      "id": 8,
+      "title": "数据库自动备份",
+      "priority": "P1",
+      "labels": [
+        "ops"
+      ],
+      "status": "closed",
+      "assignee": "unassigned",
+      "created_at": "2026-02-25T22:40:50.739995",
+      "updated_at": "2026-02-25T22:40:50.739995",
+      "file": ".issues/closed/008-数据库自动备份.md",
+      "closed_at": "2026-02-25T22:41:45.945032",
+      "resolution": ""
+    },
+    {
+      "id": 9,
+      "title": "邮件通知系统",
+      "priority": "P2",
+      "labels": [
+        "feature"
+      ],
+      "status": "closed",
+      "assignee": "unassigned",
+      "created_at": "2026-02-25T22:40:50.823955",
+      "updated_at": "2026-02-25T22:40:50.823955",
+      "file": ".issues/closed/009-邮件通知系统.md",
+      "closed_at": "2026-02-25T23:08:25.107129",
+      "resolution": ""
+    },
+    {
+      "id": 10,
+      "title": "风控系统",
+      "priority": "P2",
+      "labels": [
+        "security"
+      ],
+      "status": "closed",
+      "assignee": "unassigned",
+      "created_at": "2026-02-25T22:40:50.905661",
+      "updated_at": "2026-02-25T22:40:50.905661",
+      "file": ".issues/closed/010-风控系统.md",
+      "closed_at": "2026-02-25T23:08:25.202778",
+      "resolution": ""
+    },
+    {
+      "id": 11,
+      "title": "前端路由404问题审查",
+      "priority": "P1",
+      "labels": [
+        "bug,review"
+      ],
+      "status": "closed",
+      "assignee": "unassigned",
+      "created_at": "2026-02-25T23:25:09.173752",
+      "updated_at": "2026-02-25T23:25:09.173752",
+      "file": ".issues/closed/011-前端路由404问题审查.md",
+      "closed_at": "2026-02-25T23:26:07.347319",
+      "resolution": ""
+    },
+    {
+      "id": 12,
+      "title": "审查: /user-center/packages 路由修复",
+      "priority": "P1",
+      "labels": [
+        "review,bug"
+      ],
+      "status": "closed",
+      "assignee": "unassigned",
+      "created_at": "2026-02-26T01:09:11.502696",
+      "updated_at": "2026-02-26T01:09:11.502696",
+      "file": ".issues/closed/012-审查-user-centerpackages-路由修复.md",
+      "closed_at": "2026-02-26T01:09:37.715006",
+      "resolution": ""
+    }
+  ],
+  "next_id": 13
+}

@@ -1,5 +1,37 @@
 # MEMORY.md - 长期记忆
 
+## ⚠️⚠️⚠️ 最高优先级规则 ⚠️⚠️⚠️
+
+### 🔴🔴 长期任务进度汇报 (排第二重要！)
+- **记录时间**: 2026-02-26
+- **规则**: 长期任务执行时，每 5-10 分钟必须向用户汇报一次进度
+- **汇报内容**: 已完成、进行中、下一步、预计完成时间
+- **重要性**: 排第二，仅次於双人制衡模式
+
+### 🔴 双人制衡模式 (绝对不可违反！)
+- **记录时间**: 2026-02-25
+- **违反后果**: 导致功能未部署、404错误等严重问题
+- **规则**: 每个开发任务必须有 2 个角色参与
+  - **执行者 (Executor)**: 负责完成任务 (当前模型)
+  - **审查者 (Reviewer)**: 专门挑刺、质疑、挑战执行结果
+- **审查者模型**: `qwen3-max-2026-01-23`
+- **审查者职责**:
+  - 对执行结果提出挑战和质疑
+  - 检查是否完全满足任务要求
+  - 督促执行者改进迭代
+  - **不满意不放行**
+- **开发后必检清单**:
+  - [ ] 前端已构建: `cd frontend && pnpm build`
+  - [ ] 已部署静态文件: `cp -r dist/* ../internal/server/static/dist/`
+  - [ ] 服务已重启: `systemctl restart axonhub-dev`
+  - [ ] 外部访问测试: `curl https://dev.claudeai.best/新路由`
+  - [ ] API 功能测试: 实际调用 API 验证
+- **循环迭代**: 审查者发现问题 → 执行者修复 → 审查者再检查 → 直到完全达标
+- **审查触发方式**: 使用 sessions_spawn 调用 reviewer-agent (qwen3-max 模型)
+- **代码模型**: code-agent 使用 `zai/glm-5` (GLM-5)
+
+---
+
 ## 用户偏好
 
 ### 进度报告
@@ -17,17 +49,6 @@
 - **项目区分**: 开源项目和开发项目要用不同域名
   - 开源项目：直接部署 GitHub 代码
   - 开发项目：自定义开发版本
-- **多 Agent 协作**: 2026-02-25 新增
-  - **双人制衡模式**：每个任务必须有 2 个 Agent
-    - **执行者 (Executor)**: 负责完成任务
-    - **审查者 (Reviewer)**: 专门挑刺、质疑、挑战执行结果
-  - **审查者职责**:
-    - 对执行结果提出挑战和质疑
-    - 检查是否完全满足任务要求
-    - 督促执行者改进迭代
-    - 不满意不放行
-  - **循环迭代**: 审查者发现问题 → 执行者修复 → 审查者再检查 → 直到完全达标
-  - 使用 CCCC 或 sessions_spawn 实现
 
 ## 项目概览
 
@@ -111,3 +132,30 @@
 ## GitHub 凭证
 - **Email**: `tanaer@qq.com`
 - **PAT**: `【已移除】`
+
+## 2026-02-25 开发进度
+
+### ✅ 已完成
+1. **用户认证系统**
+   - 注册 API: `/admin/auth/signup`
+   - 登录 API: `/admin/auth/signin`
+   - 忘记密码 API: `/admin/auth/forgot-password`
+   - OAuth 回调修复 (重定向到 `/auth/callback`)
+
+2. **用户余额系统**
+   - Schema: UserQuota, QuotaTransaction, SubscriptionPlan, UserSubscription
+   - Service: UserQuotaService (余额管理、充值、消费)
+   - API: `/admin/quota/me`, `/admin/quota/transactions`, `/admin/quota/recharge`
+
+3. **前端 UI**
+   - 统一登录/注册/忘记密码页面布局 (TwoColumnAuth)
+   - 用户中心框架 (账户/模型/API Keys/套餐/充值/推荐)
+   - Landing Page 用户信息显示
+
+4. **安全**
+   - fail2ban 已启用，已封禁 14+ 攻击 IP
+
+5. **ClawRAG 评估**
+   - 已分析 https://github.com/2dogsandanerd/ClawRag
+   - 结论: 与 OpenClaw 功能重叠，价值有限
+   - 建议: 单独使用 Docling 做文档处理
