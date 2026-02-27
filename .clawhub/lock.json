@@ -24,6 +24,26 @@
     "clawhub-skill-2": {
       "version": "0.1.4",
       "installedAt": 1771319402505
+    },
+    "agent-browser": {
+      "version": "0.2.0",
+      "installedAt": 1772130590209
+    },
+    "self-improving-agent": {
+      "version": "1.0.11",
+      "installedAt": 1772170705727
+    },
+    "auto-updater": {
+      "version": "1.0.0",
+      "installedAt": 1772170782024
+    },
+    "browser-use": {
+      "version": "1.0.2",
+      "installedAt": 1772183713203
+    },
+    "desktop-control": {
+      "version": "1.0.0",
+      "installedAt": 1772183995356
     }
   }
 }
