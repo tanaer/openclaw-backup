@@ -54,6 +54,23 @@ Capture what matters. Decisions, context, things to remember. Skip the secrets u
 - This is your curated memory — the distilled essence, not raw logs
 - Over time, review your daily files and update MEMORY.md with what's worth keeping
 
+### 💾 Memory Flush (Pre-Compaction)
+
+**核心原则：先把命根子写进硬盘，再允许上下文被压缩**
+
+当会话变长时，主动执行：
+1. 总结关键决策和进展
+2. 写入 `MEMORY.md` 或 `memory/YYYY-MM-DD.md`
+3. 用 `NO_REPLY` 避免打扰用户
+
+**触发条件**：
+- 用户说"记住这个"
+- 做出重要决策
+- 学到重要教训
+- 长任务的关键节点
+
+**不要依赖上下文"记住"** — 写文件才是真正的记忆！
+
 ### 📝 Write It Down - No "Mental Notes"!
 
 - **Memory is limited** — if you want to remember something, WRITE IT TO A FILE
